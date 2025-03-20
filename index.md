@@ -157,7 +157,7 @@ uploaded = files.upload()
 ```
 
 You can now start exploring and analyzing the Lung Cancer CT dataset.
-For additional information and tutorials, refer to the official IDC documentation:
+For additional information and tutorials, refer to the official IDC documentation: https://learn.canceridc.dev/getting-started-with-idc
 
 
 
