@@ -61,14 +61,6 @@ df.head()
 
 # Getting Started with the NIH Chest X-ray Dataset (Intermediate)
 
-The first method is the same method as the Stroke Prediction Dataset.
-You will be able to download part of the data and import by browsing the folder structure on the right.
-![image](https://github.com/user-attachments/assets/cca4f59f-2047-4286-9101-8febac86a628)
-
-## However, you can follow the instructions below if you would like to download the whole dataset 
-
-**(Note this takes 30 minutes and should only be used if you want to expand your analysis)**
-
 The NIH Chest X-ray dataset is large (42 GB), so we will use **Kaggle API** and **Google Colab** to download it efficiently.
 
 ## Step 1: Get Your Kaggle API Token
@@ -166,11 +158,3 @@ uploaded = files.upload()
 
 You can now start exploring and analyzing the Lung Cancer CT dataset.
 For additional information and tutorials, refer to the official IDC documentation: https://learn.canceridc.dev/getting-started-with-idc
-
-
-
-
-
-
-
-
