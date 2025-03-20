@@ -122,7 +122,9 @@ print("Path to dataset files:", dataset_path)
 ```
 
 ![image](https://github.com/user-attachments/assets/a2f05524-b964-40cd-bb2c-3a358bc9629a)
+![image](https://github.com/user-attachments/assets/602f1a8a-fd3a-4bd2-964e-9fb0a3f14dfc)
 
+You can now reference data from the dataset through the path they provide you.
 
 ### Notes:
 The dataset is large, so downloading may take some time depending on your internet connection (took me around 10 mintues to download and extract).
