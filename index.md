@@ -15,7 +15,7 @@ We encourage you to use the provided datasets. However, if you choose to use you
 
 # Data Processing with Google Colab
 
-## 1. Setting up Google Colab:
+## Setting up Google Colab:
 - Visit: [https://colab.research.google.com/](https://colab.research.google.com/)
 - Sign in with your Google account.
 - Select **File > New notebook** in Drive.
@@ -24,7 +24,7 @@ We encourage you to use the provided datasets. However, if you choose to use you
 
 ---
 
-## 2. For NIH Chest X-ray and Stroke Prediction Datasets Only:
+## Getting started with Stroke Prediction datasets (easiest):
 - Download the dataset from Kaggle as a **ZIP** file.
 
 ![image](https://github.com/user-attachments/assets/04bf342e-2af3-4a83-999f-a880e453476c)
@@ -59,6 +59,65 @@ df.head()
 - The uploaded file will also appear in the left sidebar under "Files."
 ![image](https://github.com/user-attachments/assets/ea5ec898-0bc6-4e51-b6d9-9110251fdba7)
 
-- You are now ready for exploratory data analysis and further data processing!
+---
+
+# Getting Started with the NIH Chest X-ray Dataset (42 GB)
+
+The NIH Chest X-ray dataset is large (42 GB), so we will use **Kaggle API** and **Google Colab** to download it efficiently.
+
+## Step 1: Get Your Kaggle API Token
+
+1. Go to [Kaggle Account Settings](https://www.kaggle.com/settings/account) and log in or create an account.
+2. Scroll down to the **API** section.
+3. Click **Create New API Token**.
+4. A file called **kaggle.json** will be downloaded – this contains your API credentials.
+
+![image](https://github.com/user-attachments/assets/09b56952-9ad3-4d74-bce5-5b7e13879e81)
+
+---
+
+## Step 2: Set Up Colab to Use Kaggle API
+
+### Code Cell 1: Install Libraries & Upload API Token
+```python
+# Install necessary libraries
+!pip install kaggle
+!pip install kagglehub
+
+# Upload the kaggle.json file
+from google.colab import files
+uploaded = files.upload()
+
+# Move kaggle.json to the correct directory
+!mkdir -p ~/.kaggle/
+!mv kaggle.json ~/.kaggle/
+!chmod 600 ~/.kaggle/kaggle.json
+
+print("Kaggle API key configured successfully.")
+```
+After running this cell, upload your kaggle.json when prompted.
+
+### Code Cell 2: Download the Dataset
+```python
+import kagglehub
+
+# Download the NIH Chest X-ray dataset via KaggleHub
+dataset_path = kagglehub.dataset_download("nih-chest-xrays/data")
+
+print("Dataset downloaded successfully.")
+print("Path to dataset files:", dataset_path)
+```
+
+![image](https://github.com/user-attachments/assets/a2f05524-b964-40cd-bb2c-3a358bc9629a)
+
+
+### Notes:
+The dataset is large, so downloading may take some time depending on your internet connection (took me around 10 mintues to download and extract).
+
+### Reference:
+For more details on accessing Kaggle datasets via API, refer to this Kaggle API tutorial notebook: https://colab.research.google.com/github/corrieann/kaggle/blob/master/kaggle_api_in_colab.ipynb
+
+
+
 
 
