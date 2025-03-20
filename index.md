@@ -78,6 +78,13 @@ The NIH Chest X-ray dataset is large (42 GB), so we will use **Kaggle API** and 
 
 ## Step 2: Set Up Colab to Use Kaggle API
 
+First, let's change the runtime to TPU so we have more disk space.
+![image](https://github.com/user-attachments/assets/dc76ec12-25ba-4539-82d3-f9109becadbf)
+Click save.
+
+Note that because we are using more resources, the free tier only offers about 2 hours of data processing before you have to restart the runtime and rerun all your code again.
+It may be annoying, but it's free so can't complain!
+
 ### Code Cell 1: Install Libraries & Upload API Token
 ```python
 # Install necessary libraries
