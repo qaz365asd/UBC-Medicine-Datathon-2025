@@ -24,14 +24,12 @@ We encourage you to use the provided datasets. However, if you choose to use you
 
 ---
 
-## Getting started with Stroke Prediction datasets (easiest):
+# Getting started with Stroke Prediction datasets (easiest):
 - Download the dataset from Kaggle as a **ZIP** file.
 
 ![image](https://github.com/user-attachments/assets/04bf342e-2af3-4a83-999f-a880e453476c)
 
 - Extract the ZIP file locally.
-
----
 
 ### In your Colab notebook, follow these steps:
 
@@ -74,7 +72,7 @@ The NIH Chest X-ray dataset is large (42 GB), so we will use **Kaggle API** and 
 
 ![image](https://github.com/user-attachments/assets/09b56952-9ad3-4d74-bce5-5b7e13879e81)
 
----
+
 
 ## Step 2: Set Up Colab to Use Kaggle API
 
@@ -123,6 +121,46 @@ The dataset is large, so downloading may take some time depending on your intern
 
 ### Reference:
 For more details on accessing Kaggle datasets via API, refer to this Kaggle API tutorial notebook: https://colab.research.google.com/github/corrieann/kaggle/blob/master/kaggle_api_in_colab.ipynb
+
+---
+
+# Getting Started with Lung Cancer CT Dataset (Advanced)
+
+**Note:** This dataset requires familiarity with computational tools and workflows.
+
+## Step 1: Select Images on IDC Portal
+
+1. Go to the IDC portal and select the CT images you want to download.
+
+   ![Selecting Images](https://github.com/user-attachments/assets/c4f2b5ad-8b6f-47bf-a153-33bc5a1fb9e6)
+
+2. Scroll to the top and click **Download Image** to obtain the required manifest file.
+
+   ![Download Manifest](https://github.com/user-attachments/assets/724ffc12-88f4-44fd-9e75-5cf89e60fc14)
+
+## Step 2: Prepare Your Environment
+
+### Code Cell 1: Install Required Tools & Upload Manifest File
+
+```python
+# Install IDC Index CLI tool
+!pip install --upgrade idc-index
+
+# Upload the manifest file (file_manifest_aws.s5cmd) from your local system
+from google.colab import files
+uploaded = files.upload()
+```
+
+### Code Cell 2: Download the manifest file using idc
+```python
+!idc download file_manifest_aws.s5cmd 
+```
+
+You can now start exploring and analyzing the Lung Cancer CT dataset.
+For additional information and tutorials, refer to the official IDC documentation:
+
+
+
 
 
 
