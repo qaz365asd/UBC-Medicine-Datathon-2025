@@ -68,6 +68,7 @@ You will be able to download part of the data and import by browsing the folder 
 ## However, you can follow the instructions below if you would like to download the whole dataset 
 
 **(Note this takes 30 minutes and should only be used if you want to expand your analysis)**
+
 The NIH Chest X-ray dataset is large (42 GB), so we will use **Kaggle API** and **Google Colab** to download it efficiently.
 
 ## Step 1: Get Your Kaggle API Token
