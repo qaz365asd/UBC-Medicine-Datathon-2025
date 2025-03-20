@@ -24,7 +24,7 @@ We encourage you to use the provided datasets. However, if you choose to use you
 
 ---
 
-# Getting started with Stroke Prediction datasets (easiest):
+# Getting started with Stroke Prediction datasets (Easy):
 - Download the dataset from Kaggle as a **ZIP** file.
 
 ![image](https://github.com/user-attachments/assets/04bf342e-2af3-4a83-999f-a880e453476c)
@@ -59,7 +59,7 @@ df.head()
 
 ---
 
-# Getting Started with the NIH Chest X-ray Dataset (42 GB)
+# Getting Started with the NIH Chest X-ray Dataset (Intermediate)
 
 The NIH Chest X-ray dataset is large (42 GB), so we will use **Kaggle API** and **Google Colab** to download it efficiently.
 
