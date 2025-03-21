@@ -126,9 +126,6 @@ print("Path to dataset files:", dataset_path)
 
 You can now reference data from the dataset through the path they provide you.
 
-### Notes:
-The dataset is large, so downloading may take some time depending on your internet connection (took me around 10 mintues to download and extract).
-
 ### Reference:
 For more details on accessing Kaggle datasets via API, refer to this Kaggle API tutorial notebook: https://colab.research.google.com/github/corrieann/kaggle/blob/master/kaggle_api_in_colab.ipynb
 
