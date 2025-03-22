@@ -137,30 +137,22 @@ For more details on accessing Kaggle datasets via API, refer to this Kaggle API 
 
 ## Step 1: Select Images on IDC Portal
 
-1. Go to the IDC portal and select the CT images you want to download.
+1. Go to the IDC portal and copy the collection name on the CT images you want to download.
 
-   ![Selecting Images](https://github.com/user-attachments/assets/c4f2b5ad-8b6f-47bf-a153-33bc5a1fb9e6)
-
-2. Scroll to the top and click **Download Image** to obtain the required manifest file.
-
-   ![Download Manifest](https://github.com/user-attachments/assets/724ffc12-88f4-44fd-9e75-5cf89e60fc14)
+   ![image](https://github.com/user-attachments/assets/986c3514-d8d8-46b2-bdc5-914ef8210de3)
 
 ## Step 2: Prepare Your Environment
 
-### Code Cell 1: Install Required Tools & Upload Manifest File
+### Code Cell 1: Install Required Tools
 
 ```python
 # Install IDC Index CLI tool
 !pip install --upgrade idc-index
-
-# Upload the manifest file (file_manifest_aws.s5cmd) from your local system
-from google.colab import files
-uploaded = files.upload()
 ```
 
 ### Code Cell 2: Download the manifest file using idc
 ```python
-!idc download file_manifest_aws.s5cmd 
+!idc download 100002
 ```
 
 You can now start exploring and analyzing the Lung Cancer CT dataset.
